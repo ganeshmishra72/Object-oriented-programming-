@@ -1,0 +1,34 @@
+#include <iostream.h>
+#include<math.h>    
+void main()
+{
+    int no;
+    char prime = true;
+    cout << "Enter the number : ";
+    cin >> no;
+
+    if (no == 1)
+    {
+        cout << "Given number is nor prime not composote";
+    }
+    else
+    {
+        for (int i = 2; i <= sqrt(no); i++)
+        {
+            if (no % i == 0)
+            {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime)
+        {
+            cout << "Number is prime";
+        }
+        else
+        {
+            cout << "number is not prime";
+        }
+    }
+} 
